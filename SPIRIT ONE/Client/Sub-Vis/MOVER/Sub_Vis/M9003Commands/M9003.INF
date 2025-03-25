@@ -1,0 +1,84 @@
+; INF file for M9003.sys
+; Copyright (c) 2003, Hamamatsu Photonics K.K.
+; Portions Copyright (c) 1996-2001, BSQUARE CORPORATION
+
+[Version]
+Signature="$Windows NT$"
+Class=M9003
+ClassGUID={6C81D5C7-99B1-4706-B5C6-0FCF56346933}
+Provider=%M9003.Provider%
+
+DriverVer=08/08/2002,1.0.0.0
+CatalogFile=M9003.cat
+
+[Manufacturer]
+%M9003.Manufacturer%=M9003
+      
+[ClassInstall32]
+AddReg=M9003.AddClassReg
+
+[M9003]
+%M9003.DeviceDesc%=M9003.INSTALL, PCI\VEN_11A1&DEV_3002
+
+[ControlFlags]
+ExcludeFromSelect=PCI\VEN_11A1&DEV_3002
+
+[SourceDisksNames]
+1=%M9003.DriverDiskName%,"",,
+
+[SourceDisksFiles]
+M9003.sys=1
+      
+[DestinationDirs]
+DefaultDestDir = 10,system32\drivers ; WINDOWS\SYSTEM32\DRIVERS
+M9003.CopyFiles = 10,system32\drivers ; WINDOWS\SYSTEM32\DRIVERS
+      
+[M9003.INSTALL]
+CopyFiles=M9003.CopyFiles
+AddReg=M9003.AddRegLoader
+      
+[M9003.AddClassReg]
+HKR,,,,%M9003.ClassName%
+
+[M9003.AddRegLoader]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,M9003.sys
+
+;HKR,Parameters,RegKey,0x00010001,0x0
+
+[M9003.AddReg]
+;HKR,Parameters,RegKey,0x00010001,0x0
+
+[M9003.INSTALL.NT]
+CopyFiles=M9003.CopyFiles
+AddReg=M9003.AddReg
+
+[M9003.INSTALL.NT.Services]
+AddService = M9003,0x00000002,M9003_Service_Inst,M9003_EventLog_Inst
+
+[M9003_Service_Inst]
+ServiceType     = 1 ;%SERVICE_KERNEL_DRIVER%
+StartType       = 3 ;%SERVICE_DEMAND_START%
+ErrorControl    = 1 ;%SERVICE_ERROR_NORMAL%
+ServiceBinary   = %12%\M9003.sys
+DisplayName     = %M9003.DeviceDesc%
+
+[M9003_EventLog_Inst]
+AddReg=M9003.AddEventLogReg
+
+[M9003.AddEventLogReg]
+HKR,,EventMessageFile,0x00020000,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\M9003.sys"
+HKR,,TypesSupported,0x00010001,7
+
+[M9003.CopyFiles]
+M9003.sys
+
+
+;---------------------------------------------------------------;
+      
+[Strings]
+M9003.Provider="Hamamatsu Photonics K.K."
+M9003.Manufacturer="Hamamatsu Photonics K.K."
+M9003.DeviceDesc="M9003 Device" 
+M9003.ClassName="M9003 Device"
+M9003.DriverDiskName="M9003 Installation Diskette" 
