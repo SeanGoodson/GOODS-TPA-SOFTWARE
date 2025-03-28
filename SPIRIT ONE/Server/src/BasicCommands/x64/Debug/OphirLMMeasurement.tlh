@@ -1,0 +1,492 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.43.34809.0 (348cad67).
+//
+// C:\Users\goods\OneDrive\Desktop\Work\TPA Room\GOODS-TPA-SOFTWARE\SPIRIT ONE\Server\src\BasicCommands\x64\Debug\OphirLMMeasurement.tlh
+//
+// C++ source equivalent of type library OphirLMMeasurement.CoLMMeasurement
+// compiler-generated file - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace OphirLMMeasurementLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("f7267688-9a91-4b70-ae35-86a2d6e74d2a"))
+/* LIBID */ __OphirLMMeasurementLib;
+struct __declspec(uuid("34cbf19d-87a1-448e-a1f2-9b63eb13bc34"))
+/* dispinterface */ _ICoLMMeasurementEvents;
+struct /* coclass */ CoLMMeasurement;
+struct __declspec(uuid("74708aec-ba2b-46a2-8eef-52b55d8dcd72"))
+/* dual interface */ ICoLMMeasurement2;
+struct __declspec(uuid("d0250d00-0587-465e-abbc-b86904ec9cf9"))
+/* dual interface */ ICoLMMeasurement;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_ICoLMMeasurementEvents, __uuidof(_ICoLMMeasurementEvents));
+_COM_SMARTPTR_TYPEDEF(ICoLMMeasurement, __uuidof(ICoLMMeasurement));
+_COM_SMARTPTR_TYPEDEF(ICoLMMeasurement2, __uuidof(ICoLMMeasurement2));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("34cbf19d-87a1-448e-a1f2-9b63eb13bc34"))
+_ICoLMMeasurementEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT DataReady (
+        long hDevice,
+        long channel );
+    HRESULT PlugAndPlay ( );
+};
+
+struct __declspec(uuid("b180613c-e514-4739-aadc-cad4493910d7"))
+CoLMMeasurement;
+    // [ default ] interface ICoLMMeasurement2
+    // [ default, source ] dispinterface _ICoLMMeasurementEvents
+
+struct __declspec(uuid("d0250d00-0587-465e-abbc-b86904ec9cf9"))
+ICoLMMeasurement : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ScanWireless (
+        VARIANT * serialNumbers );
+    HRESULT GetKnownWirelessDevices (
+        VARIANT * serialNumbers );
+    HRESULT OpenWirelessDevice (
+        _bstr_t serialNumber,
+        long * hDevice );
+    HRESULT ScanUSB (
+        VARIANT * serialNumbers );
+    HRESULT OpenUSBDevice (
+        _bstr_t serialNumber,
+        long * hDevice );
+    HRESULT ResetDevice (
+        long hDevice );
+    HRESULT ResetAllDevices ( );
+    HRESULT Close (
+        long hDevice );
+    HRESULT CloseAll ( );
+    HRESULT GetVersion (
+        long * version );
+    HRESULT GetDeviceInfo (
+        long hDevice,
+        BSTR * deviceName,
+        BSTR * romVersion,
+        BSTR * serialNumber );
+    HRESULT GetDriverVersion (
+        BSTR * info );
+    HRESULT GetErrorFromCode (
+        long errorCode,
+        BSTR * errorString );
+    HRESULT GetSensorInfo (
+        long hDevice,
+        long channel,
+        BSTR * serialNumber,
+        BSTR * headType,
+        BSTR * headName );
+    HRESULT IsSensorExists (
+        long hDevice,
+        long channel,
+        VARIANT_BOOL * exists );
+    HRESULT AddWavelength (
+        long hDevice,
+        long channel,
+        long wavelength );
+    HRESULT DeleteWavelength (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT ModifyWavelength (
+        long hDevice,
+        long channel,
+        long index,
+        long wavelength );
+    HRESULT GetWavelengthsExtra (
+        long hDevice,
+        long channel,
+        VARIANT_BOOL * modifiable,
+        long * minWavelength,
+        long * maxWavelength );
+    HRESULT GetWavelengths (
+        long hDevice,
+        long channel,
+        long * index,
+        VARIANT * options );
+    HRESULT SetWavelength (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT GetDiffuser (
+        long hDevice,
+        long channel,
+        long * index,
+        VARIANT * options );
+    HRESULT SetDiffuser (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT GetFilter (
+        long hDevice,
+        long channel,
+        long * index,
+        VARIANT * options );
+    HRESULT SetFilter (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT GetMeasurementMode (
+        long hDevice,
+        long channel,
+        long * index,
+        VARIANT * options );
+    HRESULT SetMeasurementMode (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT GetPulseLengths (
+        long hDevice,
+        long channel,
+        long * index,
+        VARIANT * options );
+    HRESULT SetPulseLength (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT GetRanges (
+        long hDevice,
+        long channel,
+        long * index,
+        VARIANT * options );
+    HRESULT SetRange (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT GetThreshold (
+        long hDevice,
+        long channel,
+        long * index,
+        VARIANT * options );
+    HRESULT SetThreshold (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT SaveSettings (
+        long hDevice,
+        long channel );
+    HRESULT GetExtTrigModes (
+        long hDevice,
+        long * index,
+        VARIANT * options );
+    HRESULT SetExtTrigMode (
+        long hDevice,
+        long index );
+    HRESULT GetExtTrigOnOff (
+        long hDevice,
+        long channel,
+        long * index,
+        VARIANT * options );
+    HRESULT SetExtTrigOnOff (
+        long hDevice,
+        long channel,
+        long index );
+    HRESULT GetExtTrigWindowTime (
+        long hDevice,
+        long * extTrigWindow );
+    HRESULT SetExtTrigWindowTime (
+        long hDevice,
+        long extTrigWindowTime );
+    HRESULT ConfigureStreamMode (
+        long hDevice,
+        long channel,
+        long mode,
+        long nValue );
+    HRESULT StartStream (
+        long hDevice,
+        long channel );
+    HRESULT StopStream (
+        long hDevice,
+        long channel );
+    HRESULT GetData (
+        long hDevice,
+        long channel,
+        VARIANT * arrayValue,
+        VARIANT * arrayTimestamp,
+        VARIANT * arrayStatus );
+    HRESULT StopAllStreams ( );
+    HRESULT Read (
+        long hDevice,
+        BSTR * reply );
+    HRESULT Write (
+        long hDevice,
+        _bstr_t command );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ScanWireless (
+        /*[out]*/ VARIANT * serialNumbers ) = 0;
+      virtual HRESULT __stdcall raw_GetKnownWirelessDevices (
+        /*[out]*/ VARIANT * serialNumbers ) = 0;
+      virtual HRESULT __stdcall raw_OpenWirelessDevice (
+        /*[in]*/ BSTR serialNumber,
+        /*[out]*/ long * hDevice ) = 0;
+      virtual HRESULT __stdcall raw_ScanUSB (
+        /*[out]*/ VARIANT * serialNumbers ) = 0;
+      virtual HRESULT __stdcall raw_OpenUSBDevice (
+        /*[in]*/ BSTR serialNumber,
+        /*[out]*/ long * hDevice ) = 0;
+      virtual HRESULT __stdcall raw_ResetDevice (
+        /*[in]*/ long hDevice ) = 0;
+      virtual HRESULT __stdcall raw_ResetAllDevices ( ) = 0;
+      virtual HRESULT __stdcall raw_Close (
+        /*[in]*/ long hDevice ) = 0;
+      virtual HRESULT __stdcall raw_CloseAll ( ) = 0;
+      virtual HRESULT __stdcall raw_GetVersion (
+        /*[out]*/ long * version ) = 0;
+      virtual HRESULT __stdcall raw_GetDeviceInfo (
+        /*[in]*/ long hDevice,
+        /*[out]*/ BSTR * deviceName,
+        /*[out]*/ BSTR * romVersion,
+        /*[out]*/ BSTR * serialNumber ) = 0;
+      virtual HRESULT __stdcall raw_GetDriverVersion (
+        /*[out]*/ BSTR * info ) = 0;
+      virtual HRESULT __stdcall raw_GetErrorFromCode (
+        /*[in]*/ long errorCode,
+        /*[out]*/ BSTR * errorString ) = 0;
+      virtual HRESULT __stdcall raw_GetSensorInfo (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ BSTR * serialNumber,
+        /*[out]*/ BSTR * headType,
+        /*[out]*/ BSTR * headName ) = 0;
+      virtual HRESULT __stdcall raw_IsSensorExists (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ VARIANT_BOOL * exists ) = 0;
+      virtual HRESULT __stdcall raw_AddWavelength (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long wavelength ) = 0;
+      virtual HRESULT __stdcall raw_DeleteWavelength (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_ModifyWavelength (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index,
+        /*[in]*/ long wavelength ) = 0;
+      virtual HRESULT __stdcall raw_GetWavelengthsExtra (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ VARIANT_BOOL * modifiable,
+        /*[out]*/ long * minWavelength,
+        /*[out]*/ long * maxWavelength ) = 0;
+      virtual HRESULT __stdcall raw_GetWavelengths (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetWavelength (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_GetDiffuser (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetDiffuser (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_GetFilter (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetFilter (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_GetMeasurementMode (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetMeasurementMode (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_GetPulseLengths (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetPulseLength (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_GetRanges (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetRange (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_GetThreshold (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetThreshold (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_SaveSettings (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel ) = 0;
+      virtual HRESULT __stdcall raw_GetExtTrigModes (
+        /*[in]*/ long hDevice,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetExtTrigMode (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_GetExtTrigOnOff (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * index,
+        /*[out]*/ VARIANT * options ) = 0;
+      virtual HRESULT __stdcall raw_SetExtTrigOnOff (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long index ) = 0;
+      virtual HRESULT __stdcall raw_GetExtTrigWindowTime (
+        /*[in]*/ long hDevice,
+        /*[out]*/ long * extTrigWindow ) = 0;
+      virtual HRESULT __stdcall raw_SetExtTrigWindowTime (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long extTrigWindowTime ) = 0;
+      virtual HRESULT __stdcall raw_ConfigureStreamMode (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long mode,
+        /*[in]*/ long nValue ) = 0;
+      virtual HRESULT __stdcall raw_StartStream (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel ) = 0;
+      virtual HRESULT __stdcall raw_StopStream (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel ) = 0;
+      virtual HRESULT __stdcall raw_GetData (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ VARIANT * arrayValue,
+        /*[out]*/ VARIANT * arrayTimestamp,
+        /*[out]*/ VARIANT * arrayStatus ) = 0;
+      virtual HRESULT __stdcall raw_StopAllStreams ( ) = 0;
+      virtual HRESULT __stdcall raw_Read (
+        /*[in]*/ long hDevice,
+        /*[out]*/ BSTR * reply ) = 0;
+      virtual HRESULT __stdcall raw_Write (
+        /*[in]*/ long hDevice,
+        /*[in]*/ BSTR command ) = 0;
+};
+
+struct __declspec(uuid("74708aec-ba2b-46a2-8eef-52b55d8dcd72"))
+ICoLMMeasurement2 : ICoLMMeasurement
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT GetPulsedPowerPulseWidth (
+        long hDevice,
+        long channel,
+        long * value,
+        long * min,
+        long * max );
+    HRESULT SetPulsedPowerPulseWidth (
+        long hDevice,
+        long channel,
+        long value );
+    HRESULT GetLowFreqPowerPulseFreq (
+        long hDevice,
+        long channel,
+        double * value,
+        double * min,
+        double * max );
+    HRESULT SetLowFreqPowerPulseFreq (
+        long hDevice,
+        long channel,
+        double value );
+    HRESULT GetDeviceCalibrationDueDate (
+        long hDevice,
+        DATE * dueDate );
+    HRESULT GetSensorCalibrationDueDate (
+        long hDevice,
+        long channel,
+        DATE * dueDate );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_GetPulsedPowerPulseWidth (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ long * value,
+        /*[out]*/ long * min,
+        /*[out]*/ long * max ) = 0;
+      virtual HRESULT __stdcall raw_SetPulsedPowerPulseWidth (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ long value ) = 0;
+      virtual HRESULT __stdcall raw_GetLowFreqPowerPulseFreq (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ double * value,
+        /*[out]*/ double * min,
+        /*[out]*/ double * max ) = 0;
+      virtual HRESULT __stdcall raw_SetLowFreqPowerPulseFreq (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[in]*/ double value ) = 0;
+      virtual HRESULT __stdcall raw_GetDeviceCalibrationDueDate (
+        /*[in]*/ long hDevice,
+        /*[out]*/ DATE * dueDate ) = 0;
+      virtual HRESULT __stdcall raw_GetSensorCalibrationDueDate (
+        /*[in]*/ long hDevice,
+        /*[in]*/ long channel,
+        /*[out]*/ DATE * dueDate ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "C:\Users\goods\OneDrive\Desktop\Work\TPA Room\GOODS-TPA-SOFTWARE\SPIRIT ONE\Server\src\BasicCommands\x64\Debug\OphirLMMeasurement.tli"
+
+} // namespace OphirLMMeasurementLib
+
+#pragma pack(pop)

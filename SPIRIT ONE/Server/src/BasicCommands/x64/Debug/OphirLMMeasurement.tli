@@ -1,0 +1,351 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.43.34809.0 (348cad67).
+//
+// C:\Users\goods\OneDrive\Desktop\Work\TPA Room\GOODS-TPA-SOFTWARE\SPIRIT ONE\Server\src\BasicCommands\x64\Debug\OphirLMMeasurement.tli
+//
+// Wrapper implementations for type library OphirLMMeasurement.CoLMMeasurement
+// compiler-generated file - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface _ICoLMMeasurementEvents wrapper method implementations
+//
+
+inline HRESULT _ICoLMMeasurementEvents::DataReady ( long hDevice, long channel ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0003", hDevice, channel);
+    return _result;
+}
+
+inline HRESULT _ICoLMMeasurementEvents::PlugAndPlay ( ) {
+    HRESULT _result = 0;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, NULL);
+    return _result;
+}
+
+//
+// interface ICoLMMeasurement wrapper method implementations
+//
+
+inline HRESULT ICoLMMeasurement::ScanWireless ( VARIANT * serialNumbers ) {
+    HRESULT _hr = raw_ScanWireless(serialNumbers);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetKnownWirelessDevices ( VARIANT * serialNumbers ) {
+    HRESULT _hr = raw_GetKnownWirelessDevices(serialNumbers);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::OpenWirelessDevice ( _bstr_t serialNumber, long * hDevice ) {
+    HRESULT _hr = raw_OpenWirelessDevice(serialNumber, hDevice);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::ScanUSB ( VARIANT * serialNumbers ) {
+    HRESULT _hr = raw_ScanUSB(serialNumbers);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::OpenUSBDevice ( _bstr_t serialNumber, long * hDevice ) {
+    HRESULT _hr = raw_OpenUSBDevice(serialNumber, hDevice);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::ResetDevice ( long hDevice ) {
+    HRESULT _hr = raw_ResetDevice(hDevice);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::ResetAllDevices ( ) {
+    HRESULT _hr = raw_ResetAllDevices();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::Close ( long hDevice ) {
+    HRESULT _hr = raw_Close(hDevice);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::CloseAll ( ) {
+    HRESULT _hr = raw_CloseAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetVersion ( long * version ) {
+    HRESULT _hr = raw_GetVersion(version);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetDeviceInfo ( long hDevice, BSTR * deviceName, BSTR * romVersion, BSTR * serialNumber ) {
+    HRESULT _hr = raw_GetDeviceInfo(hDevice, deviceName, romVersion, serialNumber);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetDriverVersion ( BSTR * info ) {
+    HRESULT _hr = raw_GetDriverVersion(info);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetErrorFromCode ( long errorCode, BSTR * errorString ) {
+    HRESULT _hr = raw_GetErrorFromCode(errorCode, errorString);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetSensorInfo ( long hDevice, long channel, BSTR * serialNumber, BSTR * headType, BSTR * headName ) {
+    HRESULT _hr = raw_GetSensorInfo(hDevice, channel, serialNumber, headType, headName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::IsSensorExists ( long hDevice, long channel, VARIANT_BOOL * exists ) {
+    HRESULT _hr = raw_IsSensorExists(hDevice, channel, exists);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::AddWavelength ( long hDevice, long channel, long wavelength ) {
+    HRESULT _hr = raw_AddWavelength(hDevice, channel, wavelength);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::DeleteWavelength ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_DeleteWavelength(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::ModifyWavelength ( long hDevice, long channel, long index, long wavelength ) {
+    HRESULT _hr = raw_ModifyWavelength(hDevice, channel, index, wavelength);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetWavelengthsExtra ( long hDevice, long channel, VARIANT_BOOL * modifiable, long * minWavelength, long * maxWavelength ) {
+    HRESULT _hr = raw_GetWavelengthsExtra(hDevice, channel, modifiable, minWavelength, maxWavelength);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetWavelengths ( long hDevice, long channel, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetWavelengths(hDevice, channel, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetWavelength ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_SetWavelength(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetDiffuser ( long hDevice, long channel, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetDiffuser(hDevice, channel, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetDiffuser ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_SetDiffuser(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetFilter ( long hDevice, long channel, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetFilter(hDevice, channel, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetFilter ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_SetFilter(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetMeasurementMode ( long hDevice, long channel, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetMeasurementMode(hDevice, channel, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetMeasurementMode ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_SetMeasurementMode(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetPulseLengths ( long hDevice, long channel, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetPulseLengths(hDevice, channel, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetPulseLength ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_SetPulseLength(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetRanges ( long hDevice, long channel, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetRanges(hDevice, channel, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetRange ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_SetRange(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetThreshold ( long hDevice, long channel, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetThreshold(hDevice, channel, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetThreshold ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_SetThreshold(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SaveSettings ( long hDevice, long channel ) {
+    HRESULT _hr = raw_SaveSettings(hDevice, channel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetExtTrigModes ( long hDevice, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetExtTrigModes(hDevice, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetExtTrigMode ( long hDevice, long index ) {
+    HRESULT _hr = raw_SetExtTrigMode(hDevice, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetExtTrigOnOff ( long hDevice, long channel, long * index, VARIANT * options ) {
+    HRESULT _hr = raw_GetExtTrigOnOff(hDevice, channel, index, options);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetExtTrigOnOff ( long hDevice, long channel, long index ) {
+    HRESULT _hr = raw_SetExtTrigOnOff(hDevice, channel, index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetExtTrigWindowTime ( long hDevice, long * extTrigWindow ) {
+    HRESULT _hr = raw_GetExtTrigWindowTime(hDevice, extTrigWindow);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::SetExtTrigWindowTime ( long hDevice, long extTrigWindowTime ) {
+    HRESULT _hr = raw_SetExtTrigWindowTime(hDevice, extTrigWindowTime);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::ConfigureStreamMode ( long hDevice, long channel, long mode, long nValue ) {
+    HRESULT _hr = raw_ConfigureStreamMode(hDevice, channel, mode, nValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::StartStream ( long hDevice, long channel ) {
+    HRESULT _hr = raw_StartStream(hDevice, channel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::StopStream ( long hDevice, long channel ) {
+    HRESULT _hr = raw_StopStream(hDevice, channel);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::GetData ( long hDevice, long channel, VARIANT * arrayValue, VARIANT * arrayTimestamp, VARIANT * arrayStatus ) {
+    HRESULT _hr = raw_GetData(hDevice, channel, arrayValue, arrayTimestamp, arrayStatus);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::StopAllStreams ( ) {
+    HRESULT _hr = raw_StopAllStreams();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::Read ( long hDevice, BSTR * reply ) {
+    HRESULT _hr = raw_Read(hDevice, reply);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement::Write ( long hDevice, _bstr_t command ) {
+    HRESULT _hr = raw_Write(hDevice, command);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICoLMMeasurement2 wrapper method implementations
+//
+
+inline HRESULT ICoLMMeasurement2::GetPulsedPowerPulseWidth ( long hDevice, long channel, long * value, long * min, long * max ) {
+    HRESULT _hr = raw_GetPulsedPowerPulseWidth(hDevice, channel, value, min, max);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement2::SetPulsedPowerPulseWidth ( long hDevice, long channel, long value ) {
+    HRESULT _hr = raw_SetPulsedPowerPulseWidth(hDevice, channel, value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement2::GetLowFreqPowerPulseFreq ( long hDevice, long channel, double * value, double * min, double * max ) {
+    HRESULT _hr = raw_GetLowFreqPowerPulseFreq(hDevice, channel, value, min, max);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement2::SetLowFreqPowerPulseFreq ( long hDevice, long channel, double value ) {
+    HRESULT _hr = raw_SetLowFreqPowerPulseFreq(hDevice, channel, value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement2::GetDeviceCalibrationDueDate ( long hDevice, DATE * dueDate ) {
+    HRESULT _hr = raw_GetDeviceCalibrationDueDate(hDevice, dueDate);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICoLMMeasurement2::GetSensorCalibrationDueDate ( long hDevice, long channel, DATE * dueDate ) {
+    HRESULT _hr = raw_GetSensorCalibrationDueDate(hDevice, channel, dueDate);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
